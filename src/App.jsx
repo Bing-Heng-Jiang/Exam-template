@@ -1,0 +1,38 @@
+// src/App.jsx
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { Box, CssBaseline, CssVarsProvider } from '@mui/material';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Homepage from './pages/Homepage';
+
+export default function App() {
+
+  return (
+    <>
+      {/* Reset browser default styles (incl. body margin: 8px) */}
+      <CssBaseline />
+      <Navbar />
+
+      {/* Main body */}
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          minHeight: '95vh', // full - footer
+          pt: '80px', // account for fixed navbar height
+        }}
+      >
+        {/* Main body: fills all space between header and footer */}
+        <Box component='main' sx={{ flex: 1 }}>
+          <Routes>
+            <Route path='/' element={<Homepage />} />
+          </Routes>
+        </Box>
+      </Box>
+
+      {/* Footer at bottom of document */}
+      <Footer />
+    </>
+  );
+}
