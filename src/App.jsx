@@ -5,6 +5,8 @@ import { Box, CssBaseline, CssVarsProvider } from '@mui/material';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Homepage from './pages/Homepage';
+import Blankopage from './pages/Blankopage';
+import Slido from './pages/Slido';
 
 export default function App() {
 
@@ -27,6 +29,8 @@ export default function App() {
         <Box component='main' sx={{ flex: 1 }}>
           <Routes>
             <Route path='/' element={<Homepage />} />
+            <Route path='/blanko' element={<Blankopage />} />
+            <Route path='/sildeo' element={<Slido />} />
           </Routes>
         </Box>
       </Box>
