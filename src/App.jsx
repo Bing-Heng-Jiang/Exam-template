@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import Homepage from './pages/Homepage';
 import Blankopage from './pages/Blankopage';
 import Slido from './pages/Slido';
+import Tetro from './pages/Tetro';
 
 export default function App() {
 
@@ -30,7 +31,8 @@ export default function App() {
           <Routes>
             <Route path='/' element={<Homepage />} />
             <Route path='/blanko' element={<Blankopage />} />
-            <Route path='/sildeo' element={<Slido />} />
+            <Route path='/slido' element={<Slido />} />
+            <Route path='/tetro' element={<Tetro />} />
           </Routes>
         </Box>
       </Box>
